@@ -14,7 +14,7 @@ let cat_woman = {
     hands:2,
     gender: "female",
     shout:cat['shout'],
-    friends: [cat['shout'],'Sansa']
+    friends: [cat['name'],'Sansa']
 };
 let dog = {
     appearance:"dog",
@@ -37,11 +37,7 @@ let human = {
 
 let arr = [cat, dog, human,cat_woman];
 
-for(let i = 0;i<arr.length;i++){
-    let obj = arr[i];
+arr.forEach(obj => {
     let friends = obj['friends'].join(', ');
-    console.log(obj);
     print(`Hi, my name is <strong>${obj['name']}</strong>. I am <em>${obj['gender']} ${obj['appearance']}</em>.I have ${obj['legs']} legs and ${obj['hands']} hands. My friends are ${friends}. And you know what? ${obj['shout']}`);
-}
-
-
+})
