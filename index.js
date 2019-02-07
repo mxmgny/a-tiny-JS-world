@@ -36,9 +36,8 @@ dog.friends = [ human.name, 'Snoop Dog' ];
 catWoman.friends = [ human.name, cat.name ];
 cat.friends = [ human.name, catWoman.name] ;
 
-const inhabitants = [ cat, dog, human,catWoman ];
 
-inhabitants.forEach(obj => {
+[ cat, dog, human,catWoman ].forEach(obj => {
     print(  [
         `Hi, my name is <strong>${obj['name']}</strong>.`,
         `I am <em>${obj['gender']} ${obj['appearance']}</em>.`,
